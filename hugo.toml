@@ -1,6 +1,7 @@
 baseURL = "https://nihaochina1949.github.io/"
 title = "Goldydocs"
 
+themes = "docsy"
 # Language settings
 contentDir = "content/en"
 defaultContentLanguage = "en"
