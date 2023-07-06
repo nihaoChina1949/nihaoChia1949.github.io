@@ -1,1 +1,233 @@
-{"payload":{"allShortcutsEnabled":true,"fileTree":{"":{"items":[{"name":".github","path":".github","contentType":"directory"},{"name":".vscode","path":".vscode","contentType":"directory"},{"name":"assets","path":"assets","contentType":"directory"},{"name":"content","path":"content","contentType":"directory"},{"name":"layouts","path":"layouts","contentType":"directory"},{"name":".gitignore","path":".gitignore","contentType":"file"},{"name":".nvmrc","path":".nvmrc","contentType":"file"},{"name":"CONTRIBUTING.md","path":"CONTRIBUTING.md","contentType":"file"},{"name":"Dockerfile","path":"Dockerfile","contentType":"file"},{"name":"LICENSE","path":"LICENSE","contentType":"file"},{"name":"README.md","path":"README.md","contentType":"file"},{"name":"config.yaml","path":"config.yaml","contentType":"file"},{"name":"docker-compose.yaml","path":"docker-compose.yaml","contentType":"file"},{"name":"go.mod","path":"go.mod","contentType":"file"},{"name":"go.sum","path":"go.sum","contentType":"file"},{"name":"hugo.toml","path":"hugo.toml","contentType":"file"},{"name":"netlify.toml","path":"netlify.toml","contentType":"file"},{"name":"package.json","path":"package.json","contentType":"file"}],"totalCount":18}},"fileTreeProcessingTime":3.589951,"foldersToFetch":[],"reducedMotionEnabled":"system","repo":{"id":663211274,"defaultBranch":"main","name":"nihaoChina1949.github.io","ownerLogin":"nihaoChina1949","currentUserCanPush":true,"isFork":false,"isEmpty":false,"createdAt":"2023-07-07T03:57:53.000+08:00","ownerAvatar":"https://avatars.githubusercontent.com/u/109240017?v=4","public":true,"private":false,"isOrgOwned":false},"refInfo":{"name":"main","listCacheKey":"v0:1688674150.0","canEdit":true,"refType":"branch","currentOid":"3ef886900554bff9dd926918fb7185a036194638"},"path":"hugo.toml","currentUser":{"id":109240017,"login":"nihaoChina1949","userEmail":"nihaozhongguo1949@proton.me"},"blob":{"rawBlob":"baseURL = \"https://nihaochina1949.github.io/\"\ntitle = \"Goldydocs\"\n\n# Language settings\ncontentDir = \"content/en\"\ndefaultContentLanguage = \"en\"\ndefaultContentLanguageInSubdir = false\n# Useful when translating.\nenableMissingTranslationPlaceholders = true\n\nenableRobotsTXT = true\n\n# Will give values to .Lastmod etc.\nenableGitInfo = true\n\n# Comment out to enable taxonomies in Docsy\n# disableKinds = [\"taxonomy\", \"taxonomyTerm\"]\n\n# You can add your own taxonomies\n[taxonomies]\ntag = \"tags\"\ncategory = \"categories\"\n\n[params.taxonomy]\n# set taxonomyCloud = [] to hide taxonomy clouds\ntaxonomyCloud = [\"tags\", \"categories\"]\n\n# If used, must have same length as taxonomyCloud\ntaxonomyCloudTitle = [\"Tag Cloud\", \"Categories\"]\n\n# set taxonomyPageHeader = [] to hide taxonomies on the page headers\ntaxonomyPageHeader = [\"tags\", \"categories\"]\n\n\n# Highlighting config\npygmentsCodeFences = true\npygmentsUseClasses = false\n# Use the new Chroma Go highlighter in Hugo.\npygmentsUseClassic = false\n#pygmentsOptions = \"linenos=table\"\n# See https://help.farbox.com/pygments.html\npygmentsStyle = \"tango\"\n\n# Configure how URLs look like per section.\n[permalinks]\nblog = \"/:section/:year/:month/:day/:slug/\"\n\n# Image processing configuration.\n[imaging]\nresampleFilter = \"CatmullRom\"\nquality = 75\nanchor = \"smart\"\n\n[services]\n[services.googleAnalytics]\n# Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].\nid = \"UA-00000000-0\"\n\n# Language configuration\n\n[languages]\n[languages.en]\nlanguageName =\"English\"\n# Weight used for sorting.\nweight = 1\n[languages.en.params]\ntitle = \"Goldydocs\"\ndescription = \"A Docsy example site\"\n\n[languages.no]\nlanguageName =\"Norsk\"\ncontentDir = \"content/no\"\n[languages.no.params]\ntitle = \"Goldydocs\"\ndescription = \"Docsy er operativsystem for skyen\"\ntime_format_default = \"02.01.2006\"\ntime_format_blog = \"02.01.2006\"\n\n[languages.fa]\nlanguageName =\"فارسی\"\ncontentDir = \"content/fa\"\n[languages.fa.params]\ntitle = \"اسناد گلدی\"\ndescription = \"یک نمونه برای پوسته داکسی\"\ntime_format_default = \"2006.01.02\"\ntime_format_blog = \"2006.01.02\"\n\n[markup]\n  [markup.goldmark]\n    [markup.goldmark.parser.attribute]\n      block = true\n    [markup.goldmark.renderer]\n      unsafe = true\n  [markup.highlight]\n    # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html\n    style = \"tango\"\n    # Uncomment if you want your chosen highlight style used for code blocks without a specified language\n    # guessSyntax = \"true\"\n\n# Everything below this are Site Params\n\n# Comment out if you don't want the \"print entire section\" link enabled.\n[outputs]\nsection = [\"HTML\", \"print\", \"RSS\"]\n\n[params]\ncopyright = \"The Docsy Authors\"\nprivacy_policy = \"https://policies.google.com/privacy\"\n\n# First one is picked as the Twitter card image if not set on page.\n# images = [\"images/project-illustration.png\"]\n\n# Menu title if your navbar has a versions selector to access old versions of your site.\n# This menu appears only if you have at least one [params.versions] set.\nversion_menu = \"Releases\"\n\n# Flag used in the \"version-banner\" partial to decide whether to display a\n# banner on every page indicating that this is an archived version of the docs.\n# Set this flag to \"true\" if you want to display the banner.\narchived_version = false\n\n# The version number for the version of the docs represented in this doc set.\n# Used in the \"version-banner\" partial to display a version number for the\n# current doc set.\nversion = \"0.0\"\n\n# A link to latest version of the docs. Used in the \"version-banner\" partial to\n# point people to the main doc site.\nurl_latest_version = \"https://example.com\"\n\n# Repository configuration (URLs for in-page links to opening issues and suggesting changes)\ngithub_repo = \"https://github.com/google/docsy-example\"\n# An optional link to a related project repo. For example, the sibling repository where your product code lives.\ngithub_project_repo = \"https://github.com/google/docsy\"\n\n# Specify a value here if your content directory is not in your repo's root directory\n# github_subdir = \"\"\n\n# Uncomment this if your GitHub repo does not have \"main\" as the default branch,\n# or specify a new value if you want to reference another branch in your GitHub links\ngithub_branch= \"main\"\n\n# Google Custom Search Engine ID. Remove or comment out to disable search.\ngcs_engine_id = \"d72aa9b2712488cc3\"\n\n# Enable Algolia DocSearch\nalgolia_docsearch = false\n\n# Enable Lunr.js offline search\nofflineSearch = false\n\n# Enable syntax highlighting and copy buttons on code blocks with Prism\nprism_syntax_highlighting = false\n\n# User interface configuration\n[params.ui]\n#  Set to true to disable breadcrumb navigation.\nbreadcrumb_disable = false\n# Set to true to disable the About link in the site footer\nfooter_about_disable = false\n# Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top navbar\nnavbar_logo = true\n# Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.\nnavbar_translucent_over_cover_disable = false\n# Enable to show the side bar menu in its compact state.\nsidebar_menu_compact = false\n# Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)\nsidebar_search_disable = false\n\n# Adds a H2 section titled \"Feedback\" to the bottom of each doc. The responses are sent to Google Analytics as events.\n# This feature depends on [services.googleAnalytics] and will be disabled if \"services.googleAnalytics.id\" is not set.\n# If you want this feature, but occasionally need to remove the \"Feedback\" section from a single page,\n# add \"hide_feedback: true\" to the page's front matter.\n[params.ui.feedback]\nenable = true\n# The responses that the user sees after clicking \"yes\" (the page was helpful) or \"no\" (the page was not helpful).\nyes = 'Glad to hear it! Please <a href=\"https://github.com/USERNAME/REPOSITORY/issues/new\">tell us how we can improve</a>.'\nno = 'Sorry to hear that. Please <a href=\"https://github.com/USERNAME/REPOSITORY/issues/new\">tell us how we can improve</a>.'\n\n# Adds a reading time to the top of each doc.\n# If you want this feature, but occasionally need to remove the Reading time from a single page,\n# add \"hide_readingtime: true\" to the page's front matter\n[params.ui.readingtime]\nenable = false\n\n[params.links]\n# End user relevant links. These will show up on left side of footer and in the community page if you have one.\n[[params.links.user]]\n  name = \"User mailing list\"\n  url = \"https://example.org/mail\"\n  icon = \"fa fa-envelope\"\n  desc = \"Discussion and help from your fellow users\"\n[[params.links.user]]\n  name =\"Twitter\"\n  url = \"https://example.org/twitter\"\n  icon = \"fab fa-twitter\"\n  desc = \"Follow us on Twitter to get the latest news!\"\n[[params.links.user]]\n  name = \"Stack Overflow\"\n  url = \"https://example.org/stack\"\n  icon = \"fab fa-stack-overflow\"\n  desc = \"Practical questions and curated answers\"\n# Developer relevant links. These will show up on right side of footer and in the community page if you have one.\n[[params.links.developer]]\n  name = \"GitHub\"\n  url = \"https://github.com/google/docsy\"\n  icon = \"fab fa-github\"\n  desc = \"Development takes place here!\"\n[[params.links.developer]]\n  name = \"Slack\"\n  url = \"https://example.org/slack\"\n  icon = \"fab fa-slack\"\n  desc = \"Chat with other project developers\"\n[[params.links.developer]]\n  name = \"Developer mailing list\"\n  url = \"https://example.org/mail\"\n  icon = \"fa fa-envelope\"\n  desc = \"Discuss development issues around the project\"\n\n# hugo module configuration\n\n[module]\n  # uncomment line below for temporary local development of module\n  # replacements = \"github.com/google/docsy -> ../../docsy\"\n  [module.hugoVersion]\n    extended = true\n    min = \"0.110.0\"\n  [[module.imports]]\n    path = \"github.com/google/docsy\"\n    disable = false\n  [[module.imports]]\n    path = \"github.com/google/docsy/dependencies\"\n    disable = false\n","colorizedLines":null,"stylingDirectives":[[{"start":0,"end":7,"cssClass":"pl-smi"},{"start":10,"end":45,"cssClass":"pl-s"},{"start":10,"end":11,"cssClass":"pl-pds"},{"start":44,"end":45,"cssClass":"pl-pds"}],[{"start":0,"end":5,"cssClass":"pl-smi"},{"start":8,"end":19,"cssClass":"pl-s"},{"start":8,"end":9,"cssClass":"pl-pds"},{"start":18,"end":19,"cssClass":"pl-pds"}],[],[{"start":0,"end":19,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":10,"cssClass":"pl-smi"},{"start":13,"end":25,"cssClass":"pl-s"},{"start":13,"end":14,"cssClass":"pl-pds"},{"start":24,"end":25,"cssClass":"pl-pds"}],[{"start":0,"end":22,"cssClass":"pl-smi"},{"start":25,"end":29,"cssClass":"pl-s"},{"start":25,"end":26,"cssClass":"pl-pds"},{"start":28,"end":29,"cssClass":"pl-pds"}],[{"start":0,"end":30,"cssClass":"pl-smi"},{"start":33,"end":38,"cssClass":"pl-c1"}],[{"start":0,"end":26,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":36,"cssClass":"pl-smi"},{"start":39,"end":43,"cssClass":"pl-c1"}],[],[{"start":0,"end":15,"cssClass":"pl-smi"},{"start":18,"end":22,"cssClass":"pl-c1"}],[],[{"start":0,"end":35,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":13,"cssClass":"pl-smi"},{"start":16,"end":20,"cssClass":"pl-c1"}],[],[{"start":0,"end":43,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":45,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[],[{"start":0,"end":33,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":1,"end":11,"cssClass":"pl-en"}],[{"start":0,"end":3,"cssClass":"pl-smi"},{"start":6,"end":12,"cssClass":"pl-s"},{"start":6,"end":7,"cssClass":"pl-pds"},{"start":11,"end":12,"cssClass":"pl-pds"}],[{"start":0,"end":8,"cssClass":"pl-smi"},{"start":11,"end":23,"cssClass":"pl-s"},{"start":11,"end":12,"cssClass":"pl-pds"},{"start":22,"end":23,"cssClass":"pl-pds"}],[],[{"start":1,"end":7,"cssClass":"pl-en"},{"start":8,"end":16,"cssClass":"pl-en"}],[{"start":0,"end":48,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":13,"cssClass":"pl-smi"},{"start":17,"end":23,"cssClass":"pl-s"},{"start":17,"end":18,"cssClass":"pl-pds"},{"start":22,"end":23,"cssClass":"pl-pds"},{"start":25,"end":37,"cssClass":"pl-s"},{"start":25,"end":26,"cssClass":"pl-pds"},{"start":36,"end":37,"cssClass":"pl-pds"}],[],[{"start":0,"end":49,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":18,"cssClass":"pl-smi"},{"start":22,"end":33,"cssClass":"pl-s"},{"start":22,"end":23,"cssClass":"pl-pds"},{"start":32,"end":33,"cssClass":"pl-pds"},{"start":35,"end":47,"cssClass":"pl-s"},{"start":35,"end":36,"cssClass":"pl-pds"},{"start":46,"end":47,"cssClass":"pl-pds"}],[],[{"start":0,"end":68,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":18,"cssClass":"pl-smi"},{"start":22,"end":28,"cssClass":"pl-s"},{"start":22,"end":23,"cssClass":"pl-pds"},{"start":27,"end":28,"cssClass":"pl-pds"},{"start":30,"end":42,"cssClass":"pl-s"},{"start":30,"end":31,"cssClass":"pl-pds"},{"start":41,"end":42,"cssClass":"pl-pds"}],[],[],[{"start":0,"end":21,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":18,"cssClass":"pl-smi"},{"start":21,"end":25,"cssClass":"pl-c1"}],[{"start":0,"end":18,"cssClass":"pl-smi"},{"start":21,"end":26,"cssClass":"pl-c1"}],[{"start":0,"end":44,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":18,"cssClass":"pl-smi"},{"start":21,"end":26,"cssClass":"pl-c1"}],[{"start":0,"end":34,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":43,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":13,"cssClass":"pl-smi"},{"start":16,"end":23,"cssClass":"pl-s"},{"start":16,"end":17,"cssClass":"pl-pds"},{"start":22,"end":23,"cssClass":"pl-pds"}],[],[{"start":0,"end":43,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":1,"end":11,"cssClass":"pl-en"}],[{"start":0,"end":4,"cssClass":"pl-smi"},{"start":7,"end":43,"cssClass":"pl-s"},{"start":7,"end":8,"cssClass":"pl-pds"},{"start":42,"end":43,"cssClass":"pl-pds"}],[],[{"start":0,"end":33,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":1,"end":8,"cssClass":"pl-en"}],[{"start":0,"end":14,"cssClass":"pl-smi"},{"start":17,"end":29,"cssClass":"pl-s"},{"start":17,"end":18,"cssClass":"pl-pds"},{"start":28,"end":29,"cssClass":"pl-pds"}],[{"start":0,"end":7,"cssClass":"pl-smi"},{"start":10,"end":12,"cssClass":"pl-c1"}],[{"start":0,"end":6,"cssClass":"pl-smi"},{"start":9,"end":16,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":15,"end":16,"cssClass":"pl-pds"}],[],[{"start":1,"end":9,"cssClass":"pl-en"}],[{"start":1,"end":9,"cssClass":"pl-en"},{"start":10,"end":25,"cssClass":"pl-en"}],[{"start":0,"end":112,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":2,"cssClass":"pl-smi"},{"start":5,"end":20,"cssClass":"pl-s"},{"start":5,"end":6,"cssClass":"pl-pds"},{"start":19,"end":20,"cssClass":"pl-pds"}],[],[{"start":0,"end":24,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[],[{"start":1,"end":10,"cssClass":"pl-en"}],[{"start":1,"end":10,"cssClass":"pl-en"},{"start":11,"end":13,"cssClass":"pl-en"}],[{"start":0,"end":12,"cssClass":"pl-smi"},{"start":14,"end":23,"cssClass":"pl-s"},{"start":14,"end":15,"cssClass":"pl-pds"},{"start":22,"end":23,"cssClass":"pl-pds"}],[{"start":0,"end":26,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":6,"cssClass":"pl-smi"},{"start":9,"end":10,"cssClass":"pl-c1"}],[{"start":1,"end":10,"cssClass":"pl-en"},{"start":11,"end":13,"cssClass":"pl-en"},{"start":14,"end":20,"cssClass":"pl-en"}],[{"start":0,"end":5,"cssClass":"pl-smi"},{"start":8,"end":19,"cssClass":"pl-s"},{"start":8,"end":9,"cssClass":"pl-pds"},{"start":18,"end":19,"cssClass":"pl-pds"}],[{"start":0,"end":11,"cssClass":"pl-smi"},{"start":14,"end":36,"cssClass":"pl-s"},{"start":14,"end":15,"cssClass":"pl-pds"},{"start":35,"end":36,"cssClass":"pl-pds"}],[],[{"start":1,"end":10,"cssClass":"pl-en"},{"start":11,"end":13,"cssClass":"pl-en"}],[{"start":0,"end":12,"cssClass":"pl-smi"},{"start":14,"end":21,"cssClass":"pl-s"},{"start":14,"end":15,"cssClass":"pl-pds"},{"start":20,"end":21,"cssClass":"pl-pds"}],[{"start":0,"end":10,"cssClass":"pl-smi"},{"start":13,"end":25,"cssClass":"pl-s"},{"start":13,"end":14,"cssClass":"pl-pds"},{"start":24,"end":25,"cssClass":"pl-pds"}],[{"start":1,"end":10,"cssClass":"pl-en"},{"start":11,"end":13,"cssClass":"pl-en"},{"start":14,"end":20,"cssClass":"pl-en"}],[{"start":0,"end":5,"cssClass":"pl-smi"},{"start":8,"end":19,"cssClass":"pl-s"},{"start":8,"end":9,"cssClass":"pl-pds"},{"start":18,"end":19,"cssClass":"pl-pds"}],[{"start":0,"end":11,"cssClass":"pl-smi"},{"start":14,"end":49,"cssClass":"pl-s"},{"start":14,"end":15,"cssClass":"pl-pds"},{"start":48,"end":49,"cssClass":"pl-pds"}],[{"start":0,"end":19,"cssClass":"pl-smi"},{"start":22,"end":34,"cssClass":"pl-s"},{"start":22,"end":23,"cssClass":"pl-pds"},{"start":33,"end":34,"cssClass":"pl-pds"}],[{"start":0,"end":16,"cssClass":"pl-smi"},{"start":19,"end":31,"cssClass":"pl-s"},{"start":19,"end":20,"cssClass":"pl-pds"},{"start":30,"end":31,"cssClass":"pl-pds"}],[],[{"start":1,"end":10,"cssClass":"pl-en"},{"start":11,"end":13,"cssClass":"pl-en"}],[{"start":0,"end":12,"cssClass":"pl-smi"},{"start":14,"end":21,"cssClass":"pl-s"},{"start":14,"end":15,"cssClass":"pl-pds"},{"start":20,"end":21,"cssClass":"pl-pds"}],[{"start":0,"end":10,"cssClass":"pl-smi"},{"start":13,"end":25,"cssClass":"pl-s"},{"start":13,"end":14,"cssClass":"pl-pds"},{"start":24,"end":25,"cssClass":"pl-pds"}],[{"start":1,"end":10,"cssClass":"pl-en"},{"start":11,"end":13,"cssClass":"pl-en"},{"start":14,"end":20,"cssClass":"pl-en"}],[{"start":0,"end":5,"cssClass":"pl-smi"},{"start":8,"end":20,"cssClass":"pl-s"},{"start":8,"end":9,"cssClass":"pl-pds"},{"start":19,"end":20,"cssClass":"pl-pds"}],[{"start":0,"end":11,"cssClass":"pl-smi"},{"start":14,"end":41,"cssClass":"pl-s"},{"start":14,"end":15,"cssClass":"pl-pds"},{"start":40,"end":41,"cssClass":"pl-pds"}],[{"start":0,"end":19,"cssClass":"pl-smi"},{"start":22,"end":34,"cssClass":"pl-s"},{"start":22,"end":23,"cssClass":"pl-pds"},{"start":33,"end":34,"cssClass":"pl-pds"}],[{"start":0,"end":16,"cssClass":"pl-smi"},{"start":19,"end":31,"cssClass":"pl-s"},{"start":19,"end":20,"cssClass":"pl-pds"},{"start":30,"end":31,"cssClass":"pl-pds"}],[],[{"start":1,"end":7,"cssClass":"pl-en"}],[{"start":3,"end":9,"cssClass":"pl-en"},{"start":10,"end":18,"cssClass":"pl-en"}],[{"start":5,"end":11,"cssClass":"pl-en"},{"start":12,"end":20,"cssClass":"pl-en"},{"start":21,"end":27,"cssClass":"pl-en"},{"start":28,"end":37,"cssClass":"pl-en"}],[{"start":6,"end":11,"cssClass":"pl-smi"},{"start":14,"end":18,"cssClass":"pl-c1"}],[{"start":5,"end":11,"cssClass":"pl-en"},{"start":12,"end":20,"cssClass":"pl-en"},{"start":21,"end":29,"cssClass":"pl-en"}],[{"start":6,"end":12,"cssClass":"pl-smi"},{"start":15,"end":19,"cssClass":"pl-c1"}],[{"start":3,"end":9,"cssClass":"pl-en"},{"start":10,"end":19,"cssClass":"pl-en"}],[{"start":4,"end":95,"cssClass":"pl-c"},{"start":4,"end":5,"cssClass":"pl-c"}],[{"start":4,"end":9,"cssClass":"pl-smi"},{"start":12,"end":19,"cssClass":"pl-s"},{"start":12,"end":13,"cssClass":"pl-pds"},{"start":18,"end":19,"cssClass":"pl-pds"}],[{"start":4,"end":105,"cssClass":"pl-c"},{"start":4,"end":5,"cssClass":"pl-c"}],[{"start":4,"end":26,"cssClass":"pl-c"},{"start":4,"end":5,"cssClass":"pl-c"}],[],[{"start":0,"end":39,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[],[{"start":0,"end":72,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":1,"end":8,"cssClass":"pl-en"}],[{"start":0,"end":7,"cssClass":"pl-smi"},{"start":11,"end":17,"cssClass":"pl-s"},{"start":11,"end":12,"cssClass":"pl-pds"},{"start":16,"end":17,"cssClass":"pl-pds"},{"start":19,"end":26,"cssClass":"pl-s"},{"start":19,"end":20,"cssClass":"pl-pds"},{"start":25,"end":26,"cssClass":"pl-pds"},{"start":28,"end":33,"cssClass":"pl-s"},{"start":28,"end":29,"cssClass":"pl-pds"},{"start":32,"end":33,"cssClass":"pl-pds"}],[],[{"start":1,"end":7,"cssClass":"pl-en"}],[{"start":0,"end":9,"cssClass":"pl-smi"},{"start":12,"end":31,"cssClass":"pl-s"},{"start":12,"end":13,"cssClass":"pl-pds"},{"start":30,"end":31,"cssClass":"pl-pds"}],[{"start":0,"end":14,"cssClass":"pl-smi"},{"start":17,"end":54,"cssClass":"pl-s"},{"start":17,"end":18,"cssClass":"pl-pds"},{"start":53,"end":54,"cssClass":"pl-pds"}],[],[{"start":0,"end":67,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":46,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[],[{"start":0,"end":88,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":72,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":12,"cssClass":"pl-smi"},{"start":15,"end":25,"cssClass":"pl-s"},{"start":15,"end":16,"cssClass":"pl-pds"},{"start":24,"end":25,"cssClass":"pl-pds"}],[],[{"start":0,"end":74,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":79,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":60,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":16,"cssClass":"pl-smi"},{"start":19,"end":24,"cssClass":"pl-c1"}],[],[{"start":0,"end":77,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":74,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":18,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":7,"cssClass":"pl-smi"},{"start":10,"end":15,"cssClass":"pl-s"},{"start":10,"end":11,"cssClass":"pl-pds"},{"start":14,"end":15,"cssClass":"pl-pds"}],[],[{"start":0,"end":79,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":36,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":18,"cssClass":"pl-smi"},{"start":21,"end":42,"cssClass":"pl-s"},{"start":21,"end":22,"cssClass":"pl-pds"},{"start":41,"end":42,"cssClass":"pl-pds"}],[],[{"start":0,"end":92,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":11,"cssClass":"pl-smi"},{"start":14,"end":55,"cssClass":"pl-s"},{"start":14,"end":15,"cssClass":"pl-pds"},{"start":54,"end":55,"cssClass":"pl-pds"}],[{"start":0,"end":112,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":19,"cssClass":"pl-smi"},{"start":22,"end":55,"cssClass":"pl-s"},{"start":22,"end":23,"cssClass":"pl-pds"},{"start":54,"end":55,"cssClass":"pl-pds"}],[],[{"start":0,"end":85,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":20,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[],[{"start":0,"end":80,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":85,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":13,"cssClass":"pl-smi"},{"start":15,"end":21,"cssClass":"pl-s"},{"start":15,"end":16,"cssClass":"pl-pds"},{"start":20,"end":21,"cssClass":"pl-pds"}],[],[{"start":0,"end":74,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":13,"cssClass":"pl-smi"},{"start":16,"end":35,"cssClass":"pl-s"},{"start":16,"end":17,"cssClass":"pl-pds"},{"start":34,"end":35,"cssClass":"pl-pds"}],[],[{"start":0,"end":26,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":17,"cssClass":"pl-smi"},{"start":20,"end":25,"cssClass":"pl-c1"}],[],[{"start":0,"end":31,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":13,"cssClass":"pl-smi"},{"start":16,"end":21,"cssClass":"pl-c1"}],[],[{"start":0,"end":71,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":25,"cssClass":"pl-smi"},{"start":28,"end":33,"cssClass":"pl-c1"}],[],[{"start":0,"end":30,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":1,"end":7,"cssClass":"pl-en"},{"start":8,"end":10,"cssClass":"pl-en"}],[{"start":0,"end":48,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":18,"cssClass":"pl-smi"},{"start":21,"end":26,"cssClass":"pl-c1"}],[{"start":0,"end":58,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":20,"cssClass":"pl-smi"},{"start":23,"end":28,"cssClass":"pl-c1"}],[{"start":0,"end":93,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":11,"cssClass":"pl-smi"},{"start":14,"end":18,"cssClass":"pl-c1"}],[{"start":0,"end":113,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":37,"cssClass":"pl-smi"},{"start":40,"end":45,"cssClass":"pl-c1"}],[{"start":0,"end":56,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":20,"cssClass":"pl-smi"},{"start":23,"end":28,"cssClass":"pl-c1"}],[{"start":0,"end":114,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":22,"cssClass":"pl-smi"},{"start":25,"end":30,"cssClass":"pl-c1"}],[],[{"start":0,"end":118,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":118,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":102,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":55,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":1,"end":7,"cssClass":"pl-en"},{"start":8,"end":10,"cssClass":"pl-en"},{"start":11,"end":19,"cssClass":"pl-en"}],[{"start":0,"end":6,"cssClass":"pl-smi"},{"start":9,"end":13,"cssClass":"pl-c1"}],[{"start":0,"end":114,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":3,"cssClass":"pl-smi"},{"start":6,"end":123,"cssClass":"pl-s"},{"start":6,"end":7,"cssClass":"pl-pds"},{"start":122,"end":123,"cssClass":"pl-pds"}],[{"start":0,"end":2,"cssClass":"pl-smi"},{"start":5,"end":125,"cssClass":"pl-s"},{"start":5,"end":6,"cssClass":"pl-pds"},{"start":124,"end":125,"cssClass":"pl-pds"}],[],[{"start":0,"end":45,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":96,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":0,"end":57,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":1,"end":7,"cssClass":"pl-en"},{"start":8,"end":10,"cssClass":"pl-en"},{"start":11,"end":22,"cssClass":"pl-en"}],[{"start":0,"end":6,"cssClass":"pl-smi"},{"start":9,"end":14,"cssClass":"pl-c1"}],[],[{"start":1,"end":7,"cssClass":"pl-en"},{"start":8,"end":13,"cssClass":"pl-en"}],[{"start":0,"end":111,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":2,"end":8,"cssClass":"pl-en"},{"start":9,"end":14,"cssClass":"pl-en"},{"start":15,"end":19,"cssClass":"pl-en"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":9,"end":28,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":27,"end":28,"cssClass":"pl-pds"}],[{"start":2,"end":5,"cssClass":"pl-smi"},{"start":8,"end":34,"cssClass":"pl-s"},{"start":8,"end":9,"cssClass":"pl-pds"},{"start":33,"end":34,"cssClass":"pl-pds"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":9,"end":25,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":24,"end":25,"cssClass":"pl-pds"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":9,"end":53,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":52,"end":53,"cssClass":"pl-pds"}],[{"start":2,"end":8,"cssClass":"pl-en"},{"start":9,"end":14,"cssClass":"pl-en"},{"start":15,"end":19,"cssClass":"pl-en"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":8,"end":17,"cssClass":"pl-s"},{"start":8,"end":9,"cssClass":"pl-pds"},{"start":16,"end":17,"cssClass":"pl-pds"}],[{"start":2,"end":5,"cssClass":"pl-smi"},{"start":8,"end":37,"cssClass":"pl-s"},{"start":8,"end":9,"cssClass":"pl-pds"},{"start":36,"end":37,"cssClass":"pl-pds"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":9,"end":25,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":24,"end":25,"cssClass":"pl-pds"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":9,"end":55,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":54,"end":55,"cssClass":"pl-pds"}],[{"start":2,"end":8,"cssClass":"pl-en"},{"start":9,"end":14,"cssClass":"pl-en"},{"start":15,"end":19,"cssClass":"pl-en"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":9,"end":25,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":24,"end":25,"cssClass":"pl-pds"}],[{"start":2,"end":5,"cssClass":"pl-smi"},{"start":8,"end":35,"cssClass":"pl-s"},{"start":8,"end":9,"cssClass":"pl-pds"},{"start":34,"end":35,"cssClass":"pl-pds"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":9,"end":32,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":31,"end":32,"cssClass":"pl-pds"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":9,"end":50,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":49,"end":50,"cssClass":"pl-pds"}],[{"start":0,"end":113,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[{"start":2,"end":8,"cssClass":"pl-en"},{"start":9,"end":14,"cssClass":"pl-en"},{"start":15,"end":24,"cssClass":"pl-en"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":9,"end":17,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":16,"end":17,"cssClass":"pl-pds"}],[{"start":2,"end":5,"cssClass":"pl-smi"},{"start":8,"end":41,"cssClass":"pl-s"},{"start":8,"end":9,"cssClass":"pl-pds"},{"start":40,"end":41,"cssClass":"pl-pds"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":9,"end":24,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":23,"end":24,"cssClass":"pl-pds"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":9,"end":40,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":39,"end":40,"cssClass":"pl-pds"}],[{"start":2,"end":8,"cssClass":"pl-en"},{"start":9,"end":14,"cssClass":"pl-en"},{"start":15,"end":24,"cssClass":"pl-en"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":9,"end":16,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":15,"end":16,"cssClass":"pl-pds"}],[{"start":2,"end":5,"cssClass":"pl-smi"},{"start":8,"end":35,"cssClass":"pl-s"},{"start":8,"end":9,"cssClass":"pl-pds"},{"start":34,"end":35,"cssClass":"pl-pds"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":9,"end":23,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":22,"end":23,"cssClass":"pl-pds"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":9,"end":45,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":44,"end":45,"cssClass":"pl-pds"}],[{"start":2,"end":8,"cssClass":"pl-en"},{"start":9,"end":14,"cssClass":"pl-en"},{"start":15,"end":24,"cssClass":"pl-en"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":9,"end":33,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":32,"end":33,"cssClass":"pl-pds"}],[{"start":2,"end":5,"cssClass":"pl-smi"},{"start":8,"end":34,"cssClass":"pl-s"},{"start":8,"end":9,"cssClass":"pl-pds"},{"start":33,"end":34,"cssClass":"pl-pds"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":9,"end":25,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":24,"end":25,"cssClass":"pl-pds"}],[{"start":2,"end":6,"cssClass":"pl-smi"},{"start":9,"end":56,"cssClass":"pl-s"},{"start":9,"end":10,"cssClass":"pl-pds"},{"start":55,"end":56,"cssClass":"pl-pds"}],[],[{"start":0,"end":27,"cssClass":"pl-c"},{"start":0,"end":1,"cssClass":"pl-c"}],[],[{"start":1,"end":7,"cssClass":"pl-en"}],[{"start":2,"end":66,"cssClass":"pl-c"},{"start":2,"end":3,"cssClass":"pl-c"}],[{"start":2,"end":59,"cssClass":"pl-c"},{"start":2,"end":3,"cssClass":"pl-c"}],[{"start":3,"end":9,"cssClass":"pl-en"},{"start":10,"end":21,"cssClass":"pl-en"}],[{"start":4,"end":12,"cssClass":"pl-smi"},{"start":15,"end":19,"cssClass":"pl-c1"}],[{"start":4,"end":7,"cssClass":"pl-smi"},{"start":10,"end":19,"cssClass":"pl-s"},{"start":10,"end":11,"cssClass":"pl-pds"},{"start":18,"end":19,"cssClass":"pl-pds"}],[{"start":4,"end":10,"cssClass":"pl-en"},{"start":11,"end":18,"cssClass":"pl-en"}],[{"start":4,"end":8,"cssClass":"pl-smi"},{"start":11,"end":36,"cssClass":"pl-s"},{"start":11,"end":12,"cssClass":"pl-pds"},{"start":35,"end":36,"cssClass":"pl-pds"}],[{"start":4,"end":11,"cssClass":"pl-smi"},{"start":14,"end":19,"cssClass":"pl-c1"}],[{"start":4,"end":10,"cssClass":"pl-en"},{"start":11,"end":18,"cssClass":"pl-en"}],[{"start":4,"end":8,"cssClass":"pl-smi"},{"start":11,"end":49,"cssClass":"pl-s"},{"start":11,"end":12,"cssClass":"pl-pds"},{"start":48,"end":49,"cssClass":"pl-pds"}],[{"start":4,"end":11,"cssClass":"pl-smi"},{"start":14,"end":19,"cssClass":"pl-c1"}]],"csv":null,"csvError":null,"dependabotInfo":{"showConfigurationBanner":null,"configFilePath":null,"networkDependabotPath":"/nihaoChina1949/nihaoChina1949.github.io/network/updates","dismissConfigurationNoticePath":"/settings/dismiss-notice/dependabot_configuration_notice","configurationNoticeDismissed":false,"repoAlertsPath":"/nihaoChina1949/nihaoChina1949.github.io/security/dependabot","repoSecurityAndAnalysisPath":"/nihaoChina1949/nihaoChina1949.github.io/settings/security_analysis","repoOwnerIsOrg":false,"currentUserCanAdminRepo":true},"displayName":"hugo.toml","displayUrl":"https://github.com/nihaoChina1949/nihaoChina1949.github.io/blob/main/hugo.toml?raw=true","headerInfo":{"blobSize":"7.82 KB","deleteInfo":{"deletePath":"https://github.com/nihaoChina1949/nihaoChina1949.github.io/delete/main/hugo.toml","deleteTooltip":"Delete this file"},"editInfo":{"editTooltip":"Edit this file"},"ghDesktopPath":"https://desktop.github.com","gitLfsPath":null,"onBranch":true,"shortPath":"2c2c9d4","siteNavLoginPath":"/login?return_to=https%3A%2F%2Fgithub.com%2FnihaoChina1949%2FnihaoChina1949.github.io%2Fblob%2Fmain%2Fhugo.toml","isCSV":false,"isRichtext":false,"toc":null,"lineInfo":{"truncatedLoc":"233","truncatedSloc":"194"},"mode":"file"},"image":false,"isCodeownersFile":null,"isValidLegacyIssueTemplate":false,"issueTemplateHelpUrl":"https://docs.github.com/articles/about-issue-and-pull-request-templates","issueTemplate":null,"discussionTemplate":null,"language":"TOML","large":false,"loggedIn":true,"newDiscussionPath":"/nihaoChina1949/nihaoChina1949.github.io/discussions/new","newIssuePath":"/nihaoChina1949/nihaoChina1949.github.io/issues/new","planSupportInfo":{"repoIsFork":null,"repoOwnedByCurrentUser":null,"requestFullPath":"/nihaoChina1949/nihaoChina1949.github.io/blob/main/hugo.toml","showFreeOrgGatedFeatureMessage":null,"showPlanSupportBanner":null,"upgradeDataAttributes":null,"upgradePath":null},"publishBannersInfo":{"dismissActionNoticePath":"/settings/dismiss-notice/publish_action_from_dockerfile","dismissStackNoticePath":"/settings/dismiss-notice/publish_stack_from_file","releasePath":"/nihaoChina1949/nihaoChina1949.github.io/releases/new?marketplace=true","showPublishActionBanner":false,"showPublishStackBanner":false},"renderImageOrRaw":false,"richText":null,"renderedFileInfo":null,"tabSize":8,"topBannersInfo":{"overridingGlobalFundingFile":false,"globalPreferredFundingPath":null,"repoOwner":"nihaoChina1949","repoName":"nihaoChina1949.github.io","showInvalidCitationWarning":false,"citationHelpUrl":"https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-citation-files","showDependabotConfigurationBanner":null,"actionsOnboardingTip":null},"truncated":false,"viewable":true,"workflowRedirectUrl":null,"symbols":{"timedOut":false,"notAnalyzed":true,"symbols":[]}},"csrf_tokens":{"/nihaoChina1949/nihaoChina1949.github.io/branches":{"post":"lW4jk-GIw13Gq8n4-HtSh4L-_nZcioEQwDVp7cw8iQkWo8-qmZsx63mpx6l0n_Y9kOHlp7e3-gKAgWPljhpIHg"}}},"title":"nihaoChina1949.github.io/hugo.toml at main · nihaoChina1949/nihaoChina1949.github.io","locale":"en"}
+baseURL = "https://nihaochina1949.github.io/"
+title = "Goldydocs"
+
+# Language settings
+contentDir = "content/en"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+# Useful when translating.
+enableMissingTranslationPlaceholders = true
+
+enableRobotsTXT = true
+
+# Will give values to .Lastmod etc.
+enableGitInfo = true
+
+# Comment out to enable taxonomies in Docsy
+# disableKinds = ["taxonomy", "taxonomyTerm"]
+
+# You can add your own taxonomies
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[params.taxonomy]
+# set taxonomyCloud = [] to hide taxonomy clouds
+taxonomyCloud = ["tags", "categories"]
+
+# If used, must have same length as taxonomyCloud
+taxonomyCloudTitle = ["Tag Cloud", "Categories"]
+
+# set taxonomyPageHeader = [] to hide taxonomies on the page headers
+taxonomyPageHeader = ["tags", "categories"]
+
+
+# Highlighting config
+pygmentsCodeFences = true
+pygmentsUseClasses = false
+# Use the new Chroma Go highlighter in Hugo.
+pygmentsUseClassic = false
+#pygmentsOptions = "linenos=table"
+# See https://help.farbox.com/pygments.html
+pygmentsStyle = "tango"
+
+# Configure how URLs look like per section.
+[permalinks]
+blog = "/:section/:year/:month/:day/:slug/"
+
+# Image processing configuration.
+[imaging]
+resampleFilter = "CatmullRom"
+quality = 75
+anchor = "smart"
+
+[services]
+[services.googleAnalytics]
+# Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
+id = "UA-00000000-0"
+
+# Language configuration
+
+[languages]
+[languages.en]
+languageName ="English"
+# Weight used for sorting.
+weight = 1
+[languages.en.params]
+title = "Goldydocs"
+description = "A Docsy example site"
+
+[languages.no]
+languageName ="Norsk"
+contentDir = "content/no"
+[languages.no.params]
+title = "Goldydocs"
+description = "Docsy er operativsystem for skyen"
+time_format_default = "02.01.2006"
+time_format_blog = "02.01.2006"
+
+[languages.fa]
+languageName ="فارسی"
+contentDir = "content/fa"
+[languages.fa.params]
+title = "اسناد گلدی"
+description = "یک نمونه برای پوسته داکسی"
+time_format_default = "2006.01.02"
+time_format_blog = "2006.01.02"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser.attribute]
+      block = true
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
+    style = "tango"
+    # Uncomment if you want your chosen highlight style used for code blocks without a specified language
+    # guessSyntax = "true"
+
+# Everything below this are Site Params
+
+# Comment out if you don't want the "print entire section" link enabled.
+[outputs]
+section = ["HTML", "print", "RSS"]
+
+[params]
+copyright = "The Docsy Authors"
+privacy_policy = "https://policies.google.com/privacy"
+
+# First one is picked as the Twitter card image if not set on page.
+# images = ["images/project-illustration.png"]
+
+# Menu title if your navbar has a versions selector to access old versions of your site.
+# This menu appears only if you have at least one [params.versions] set.
+version_menu = "Releases"
+
+# Flag used in the "version-banner" partial to decide whether to display a
+# banner on every page indicating that this is an archived version of the docs.
+# Set this flag to "true" if you want to display the banner.
+archived_version = false
+
+# The version number for the version of the docs represented in this doc set.
+# Used in the "version-banner" partial to display a version number for the
+# current doc set.
+version = "0.0"
+
+# A link to latest version of the docs. Used in the "version-banner" partial to
+# point people to the main doc site.
+url_latest_version = "https://example.com"
+
+# Repository configuration (URLs for in-page links to opening issues and suggesting changes)
+github_repo = "https://github.com/google/docsy-example"
+# An optional link to a related project repo. For example, the sibling repository where your product code lives.
+github_project_repo = "https://github.com/google/docsy"
+
+# Specify a value here if your content directory is not in your repo's root directory
+# github_subdir = ""
+
+# Uncomment this if your GitHub repo does not have "main" as the default branch,
+# or specify a new value if you want to reference another branch in your GitHub links
+github_branch= "main"
+
+# Google Custom Search Engine ID. Remove or comment out to disable search.
+gcs_engine_id = "d72aa9b2712488cc3"
+
+# Enable Algolia DocSearch
+algolia_docsearch = false
+
+# Enable Lunr.js offline search
+offlineSearch = false
+
+# Enable syntax highlighting and copy buttons on code blocks with Prism
+prism_syntax_highlighting = false
+
+# User interface configuration
+[params.ui]
+#  Set to true to disable breadcrumb navigation.
+breadcrumb_disable = false
+# Set to true to disable the About link in the site footer
+footer_about_disable = false
+# Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top navbar
+navbar_logo = true
+# Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
+navbar_translucent_over_cover_disable = false
+# Enable to show the side bar menu in its compact state.
+sidebar_menu_compact = false
+# Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
+sidebar_search_disable = false
+
+# Adds a H2 section titled "Feedback" to the bottom of each doc. The responses are sent to Google Analytics as events.
+# This feature depends on [services.googleAnalytics] and will be disabled if "services.googleAnalytics.id" is not set.
+# If you want this feature, but occasionally need to remove the "Feedback" section from a single page,
+# add "hide_feedback: true" to the page's front matter.
+[params.ui.feedback]
+enable = true
+# The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
+yes = 'Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
+no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
+
+# Adds a reading time to the top of each doc.
+# If you want this feature, but occasionally need to remove the Reading time from a single page,
+# add "hide_readingtime: true" to the page's front matter
+[params.ui.readingtime]
+enable = false
+
+[params.links]
+# End user relevant links. These will show up on left side of footer and in the community page if you have one.
+[[params.links.user]]
+  name = "User mailing list"
+  url = "https://example.org/mail"
+  icon = "fa fa-envelope"
+  desc = "Discussion and help from your fellow users"
+[[params.links.user]]
+  name ="Twitter"
+  url = "https://example.org/twitter"
+  icon = "fab fa-twitter"
+  desc = "Follow us on Twitter to get the latest news!"
+[[params.links.user]]
+  name = "Stack Overflow"
+  url = "https://example.org/stack"
+  icon = "fab fa-stack-overflow"
+  desc = "Practical questions and curated answers"
+# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+[[params.links.developer]]
+  name = "GitHub"
+  url = "https://github.com/google/docsy"
+  icon = "fab fa-github"
+  desc = "Development takes place here!"
+[[params.links.developer]]
+  name = "Slack"
+  url = "https://example.org/slack"
+  icon = "fab fa-slack"
+  desc = "Chat with other project developers"
+[[params.links.developer]]
+  name = "Developer mailing list"
+  url = "https://example.org/mail"
+  icon = "fa fa-envelope"
+  desc = "Discuss development issues around the project"
+
+# hugo module configuration
+
+[module]
+  # uncomment line below for temporary local development of module
+  # replacements = "github.com/google/docsy -> ../../docsy"
+  [module.hugoVersion]
+    extended = true
+    min = "0.110.0"
+  [[module.imports]]
+    path = "github.com/google/docsy"
+    disable = false
+  [[module.imports]]
+    path = "github.com/google/docsy/dependencies"
+    disable = false
